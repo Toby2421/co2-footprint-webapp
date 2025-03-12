@@ -1,0 +1,240 @@
+/* Allgemeine Stile für das Dokument */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 248, 240); /* Hellgrüner Hintergrund */
+    scroll-behavior: smooth;
+}
+
+ .sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(60, 85, 35, 0.9); /* DUNKLERES GRÜN */
+    padding: 10px 0;
+    transition: background 0.3s ease;
+} 
+
+/* Navbar-Links in Weiß */
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd !important; /* Leicht helleres Weiß beim Hover */
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background-color: #3C5523; /* DUNKLERES GRÜN für den Banner */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hauptinhalt */
+main {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 70px; /* Platz für die fixierte Kopfzeile */
+}
+
+/* Tabellenstil */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(60, 85, 35, 0.9); /* Dunkleres Grün passend zur Kopfzeile */
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    max-width: 250px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-links, .footer-contact {
+    margin: 20px 0;
+}
+
+.footer-links h5, .footer-contact h5 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Unterer Teil der Fußzeile */
+.footer-bottom {
+    background-color: rgba(45, 70, 25, 0.9); /* Noch dunklerer Grünton */
+    padding: 10px 0;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsives Layout der Fußzeile */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .footer-logo, .footer-links, .footer-contact {
+        margin: 0 20px;
+    }
+}
+
+/* Dropdown-Menü */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1050;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Dropdown sichtbar machen */
+.show {
+    display: block !important;
+}
+
+/* Sortierbutton */
+.btn.dropdown-toggle {
+    background-color: rgba(60, 85, 35, 0.9); /* Dunkleres Grün */
+    border: none;
+    color: white;
+}
+
+.btn.dropdown-toggle:hover {
+    background-color: rgba(45, 70, 25, 1);
+}
+
+/* Suchfeld */
+.input-group {
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 200px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    footer {
+        padding: 15px;
+        text-align: center;
+    }
+
+    footer a {
+        display: block;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 150px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer a {
+        padding: 5px 0;
+    }
+}
